@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="world-map">
+        <div id="overlay">
+        <img src="image.png" alt="Map"/>
+        <button class="pin name-and-intro" onclick="popupNameIntro()">
+            <span>Name and Intro</span>
+        </button>
+        <div id="popup-name-and-intro">
+            <p><strong>Name:</strong> Sophie Fox</p>
+            <p><strong>Pronouns:</strong> They/She</p>
+            <p><strong>Degree:</strong> Electrical engineering and computer science</p>
+            <p><strong>Year:</strong> Second year</p>
+            <p><strong>Age:</strong> 19 years old</p>
+            <button class="close" onclick="closeFn()">
+                Close
+            </button>
+        </div>
+        <button class="pin hobbies-and-interests" onclick="popupHobbyInfo()">
+            <span>Hobbies and Interests</span>
+        </button>
+        <div id="popup-hobbies-and-interests">
+            <h3>Hobbies and Interests</h3>
+            <ul>
+                <li>Robotics!</li>
+                <li>Crochet</li>
+                <li>Music (current getting back into it but used to play bassoon)</li>
+                <li>Programming competitions</li>
+            </ul>
+            <button class="close" onclick="closeFn()">
+                Closes
+            </button>
+        </div>
+        <button class="pin fun-facts" onclick="popupFunFactsInfo()">
+            <span>Fun Facts</span>
+        </button>
+        <div id="popup-fun-fact">
+            <h3>Fun Facts</h3>
+            <ul>
+                <li>I got to the diamond league of duolingo and immediately ended my streak.
+                </li>
+                <li>Massive GYG fan, best food place on campus</li>
+                <li>Love music concerts</li>
+                </ul>
+            <button class="close" onclick="closeFn()">
+                Close
+            </button>
+        </div>
+        <button class="pin pets" onclick="popupPetsInfo()">
+            <span>My pets!</span>
+        </button>
+        <div id="popup-pets">
+            <h3>My Pets <3</h3>
+
+            <div class="flex-box">
+            <img src="mia.png" class="pet-pic" alt="Mia">
+            <div class="info">
+                <h4>
+                    Mia (left)
+                </h4>
+                <ul>
+                    <li>4 year old cat</li>
+                    <li>Indoor cat due to being FIV positive</li>
+                    <li>Sometimes thinks shes a human</li>
+                    <li>Loves attention and pats</li>
+                    <li>Will love you forever the moment you give her food</li>
+                </ul>
+            </div>
+            </div>
+            <div class="flex-box">
+                <div class="info">
+                    <h4>
+                        Bella (right)
+                    </h4>
+                    <ul>
+                        <li>2 year old cat</li>
+                        <li>You never know what she is thinking, nor want to know</li>
+                        <li>Quiet and won't trust you unless you have food</li>
+                        <li>Mia's daughter</li>
+                    </ul>
+                </div>
+                <img src="bella.jpg" class="pet-pic" alt="Bella">
+            </div>
+
+            <button class="close" onclick="closeFn()">
+                Close
+            </button>
+        </div>
+            
+        <button class="pin other" onclick="popupOtherInfo()">
+            <span>Other info</span>
+        </button>
+        <div id="popup-other-info">
+            <h3>Other Info</h3>
+            <p>In the theme of around the world:
+                <ul><li>
+                    Born in: Sydney, Australia
+                </li>
+                <li>
+                    Raised in: Sydney, Australia
+                </li>
+                <li>
+                    Lived in: Sydney, Australia
+                </li></ul>
+            </p>
+            <p>I have never moved, living in the same house I came home to after being born. </p>
+            <button class="close" onclick="closeFn()">
+                Close
+            </button>
+        </div>
+    </div>
+    </div>
+    <script>
+        function popupOtherInfo() {
+            document.getElementById(
+                "popup-other-info"
+            ).style.display = "block";
+        }
+        function popupHobbyInfo() {
+            document.getElementById(
+                "popup-hobbies-and-interests"
+            ).style.display = "block";
+        }
+        function popupFunFactsInfo() {
+            document.getElementById(
+                "popup-fun-fact"
+            ).style.display = "block";
+        }
+        function popupNameIntro() {
+            document.getElementById(
+                "popup-name-and-intro"
+            ).style.display = "block";
+        }
+        function popupPetsInfo() {
+            document.getElementById(
+                "popup-pets"
+            ).style.display = "block";
+        }
+        function closeFn() {
+            document.getElementById(
+                "popup-name-and-intro"
+            ).style.display = "none";
+            document.getElementById(
+                "popup-hobbies-and-interests"
+            ).style.display = "none";
+            document.getElementById(
+                "popup-fun-fact"
+            ).style.display = "none";
+            document.getElementById(
+                "popup-other-info"
+            ).style.display = "none";
+            document.getElementById(
+                "popup-pets"
+            ).style.display = "none";
+        }
+    </script>
+</body>
+</html>
